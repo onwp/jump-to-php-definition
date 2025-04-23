@@ -1,0 +1,85 @@
+{
+  "name": "jump-to-php-definition",
+  "displayName": "Jump to PHP Definition",
+  "description": "Go to definition in PHP",
+  "version": "0.1.0",
+  "icon": "images/icon.png",
+  "publisher": "onwp",
+  "author": {
+    "name": "onwp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "php",
+    "definition",
+    "navigation",
+    "navigate to php",
+    "navigate php",
+    "php navigate",
+    "php navigator",
+    "go to definition",
+    "go to php definition",
+    "go to php",
+    "go to php variable",
+    "jump to php definition",
+    "jump to php",
+    "jump to php variable",
+    "go php",
+    "jump php",
+    "php jump",
+    "php intellisense",
+    "php intelephense",
+    "php intelephense definition",
+    "php intelephense definition provider",
+    "intellisense",
+    "intelephense"
+  ],
+  "galleryBanner": {
+    "color": "#777BB3",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onwp/jump-to-php-definition"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:php"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "php",
+        "extensions": [".php"]
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/node": "^20.2.5",
+    "@types/vscode": "^1.74.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
+    "@typescript-eslint/parser": "^5.59.8",
+    "eslint": "^8.41.0",
+    "glob": "^8.1.0",
+    "ts-loader": "^9.4.3",
+    "typescript": "^5.1.3",
+    "webpack": "^5.85.0",
+    "webpack-cli": "^5.1.1"
+  }
+}

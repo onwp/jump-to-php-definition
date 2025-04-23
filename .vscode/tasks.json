@@ -1,0 +1,46 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "npm",
+            "script": "watch",
+            "problemMatcher": {
+                "owner": "webpack",
+                "pattern": {
+                    "regexp": "^([^\\s].*)\\((\\d+,\\d+)\\):\\s+(error|warning|info)\\s*(.*)$",
+                    "file": 1,
+                    "location": 2,
+                    "severity": 3,
+                    "message": 4
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": {
+                        "regexp": "(Starting compilation|Starting incremental compilation)"
+                    },
+                    "endsPattern": {
+                        "regexp": "webpack [\\d.]+ compiled( with [\\d]+ (warning|error))?( in \\d+ ms)?"
+                    }
+                }
+            },
+            "isBackground": true,
+            "presentation": {
+                "reveal": "never",
+                "panel": "dedicated"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "npm",
+            "script": "compile",
+            "group": "build",
+            "problemMatcher": ["$tsc"],
+            "presentation": {
+                "reveal": "silent"
+            }
+        }
+    ]
+}
