@@ -4,9 +4,9 @@
   "description": "Go to definition in PHP",
   "version": "0.2.0",
   "icon": "images/icon.png",
-  "publisher": "onwp",
+  "publisher": "SerhatAksakal",
   "author": {
-    "name": "onwp"
+    "name": "Serhat Aksakal"
   },
   "license": "MIT",
   "keywords": [
